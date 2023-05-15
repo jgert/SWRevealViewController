@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
@@ -9,13 +9,18 @@ let package = Package(
     products: [
         .library(
             name: "SWRevealViewController",
-            targets: ["SWRevealViewController"]
+            targets: [
+                "SWRevealViewController",
+            ]
         )
+    ],
+    dependencies: [
     ],
     targets: [
         .target(
             name: "SWRevealViewController",
-            path: "SWRevealViewController"
+            path: "SWRevealViewController",
+            publicHeadersPath: "include"
         )
     ]
 )
